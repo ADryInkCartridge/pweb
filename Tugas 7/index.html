@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+</head>
+
+<body>
+    <section class="vh-100" >
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+              <div class="card" style="border-radius: 1rem;">
+                <div class="row g-0">
+                  <div class="card-body p-4 p-lg-5 text-black">
+      
+                    <form name="login"   onsubmit="return validateForm()">
+                      
+                      <div class="d-flex align-items-center mb-3 pb-1">
+                        <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                        <img class='img-fluid' src="https://www.its.ac.id/wp-content/uploads/2020/07/Logo-ITS-1-300x185.png" alt="">
+                      </div>
+    
+                      <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+    
+                      <div class="form-outline mb-4">
+                        <input type="email" id="email" name='email' class="form-control form-control-lg" />
+                        <label class="form-label">Email address</label>
+                      </div>
+    
+                      <div class="form-outline mb-4">
+                        <input type="password" id="password" name="password" class="form-control form-control-lg" />
+                        <label class="form-label">Password</label>
+                      </div>
+    
+                      <div class="pt-1 mb-4">
+                        <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+                      </div>
+    
+                      <a class="small text-muted" href="#">Forgot password?</a>
+                      <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#" style="color: #393f81;">Register here</a></p>
+                      <a class="text-black-50 text-muted" href="contact.html">Contact us!</a>
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        let i = 1;
+        function slideShow() {
+            if (i > 3) 
+              i = 1;
+            console.log(i)
+            document.body.style.backgroundImage = "url('" + i + ".jpg ')";
+            i++;
+            setTimeout(slideShow, 10000);
+        }
+        function validateForm() {
+          if (document.forms["login"]["email"].value == "") {
+            alert("Email tidak boleh kosong");
+            document.forms["login"]["email"].focus();
+            return false;
+          }
+          else if (document.forms["login"]["password"].value == "") {
+            alert("Password Tidak Boleh Kosong");
+            document.forms["login"]["password"].focus();
+            return false;
+          }
+          
+          alert("login successful")
+        }
+        slideShow()
+      </script>
+</body>
+</html>

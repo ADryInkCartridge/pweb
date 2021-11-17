@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Warung Tegal</title>
+    <script>
+        var slidePosition = 1;
+        SlideShow(slidePosition);
+
+        function plusSlides(n) {
+            SlideShow(slidePosition += n);
+        }
+
+        function currentSlide(n) {
+            SlideShow(slidePosition = n);
+        }
+
+        function SlideShow(n) {
+            var i;
+            var slides = document.getElementsByClassName("Containers");
+            if (n > slides.length) { slidePosition = 1 }
+            if (n < 1) { slidePosition = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slidePosition - 1].style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Warung Tegal</h1>
+            <nav>
+                <ul>
+                    <li><a href="" class="current">Beranda</a></li>
+                    <li><a href="">Daftar masakan</a></li>
+                    <li><a href="">Katering</a></li>
+                    <li><a href="">Tentang</a></li>
+                    <li><a href="">Kontak</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="slideshow-container">
+            <div class="Containers ContainersImage">
+                <img src="https://asset.kompas.com/crops/ZxkpF8bAqYKIXbsr_abBGyY2hyw=/0x0:780x520/750x500/data/photo/2021/02/25/6037b6fb51bdd.jpg"
+                    style="height:500px;">
+                <div class="Info" style=" color: white;">Pecel</div>
+            </div>
+            <div class="Containers">
+                <img src="https://www.goodnewsfromindonesia.id/uploads/post/large-543defb8b5718-86712ff11c99c09cb60453869a030596.jpg"
+                    style="height:500px;">
+                <div class="Info" style=" color: white;">Sate</div>
+            </div>
+            <div class="Containers">
+                <img src="https://statik.tempo.co/data/2018/06/03/id_709908/709908_720.jpg" style="height:500px;">
+                <div class="Info" style=" color: white;">Bakso</div>
+            </div>
+            <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <aside>
+
+            <section class="popular-recipes">
+                <h2>Masakan Populer</h2>
+                <a href="">Sayur Sop</a>
+                <a href="">Sayur Asem</a>
+                <a href="">Sayur Lodeh</a>
+                <a href="">Sayur Bayam</a>
+            </section>
+            <section class="contact-details">
+                <h2>Kontak</h2>
+                <p>Warung Tegal <br>di seluruh Indonesia</p>
+            </section>
+        </aside>
+        <section class="courses">
+            <article>
+                <h2>Soto Ayam</h2>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjtg_Qhho_EU3vFp8LYZ0cV2eiCXB7pQC2Uw&usqp=CAU"
+                        alt="soto">
+                    <figcaption>Soto Indonesia</figcaption>
+                </figure>
+                <hgroup>
+                    <h3>Makanan Berkuah</h3>
+                </hgroup>
+                <p>Soto ayam adalah makanan khas Indonesia yang berupa sejenis sup ayam dengan kuah yang berwarna
+                    kekuningan. Warna kuning ini dikarenakan oleh kunyit yang digunakan sebagai bumbu. Soto ayam banyak
+                    ditemukan di daerah-daerah di Indonesia dan Singapura.</p>
+            </article>
+            <article>
+                <h2>Masakan Pecel</h2>
+                <figure>
+                    <img src="https://awsimages.detik.net.id/community/media/visual/2021/05/21/cara-membuat-sambal-pecel-madiun-1.jpeg?w=700&q=90"
+                        alt="pecel">
+                    <figcaption>Pecel Indonesia</figcaption>
+                </figure>
+                <hgroup>
+                    <h3>Makanan dengan Bumbu Kacang</h3>
+                </hgroup>
+                <p>Pecel merupakan makanan yang terdiri dari sayur yang direbus dan lauk yang dihidangkan dengan alas
+                    yang berbeda-beda sesuai kota asal pecel, misalnya piring lidi yang disebut ingke, pincuk, atau
+                    tampah bambu.</p>
+            </article>
+        </section>
+        <footer>
+            &copy; Bayu Adjie Sidharta
+        </footer>
+    </div>
+</body>
+
+</html>

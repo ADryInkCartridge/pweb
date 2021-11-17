@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.blade.php": "html",
+        "*.tpl": "",
+        "limits.h": "c"
+    },
+    "liveServer.settings.port": 5501
+}

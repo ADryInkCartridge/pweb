@@ -1,0 +1,206 @@
+header,
+section,
+footer,
+aside,
+nav,
+article,
+figure,
+figcaption {
+  display: block;
+}
+body {
+  color: #ffffff;
+  background-color: black;
+  background-image: url(https://res.cloudinary.com/grohealth/image/upload/f_auto,fl_lossy,q_auto/v1583749915/DCUK/Content/iStock-879690980.jpg);
+  background-position: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.4em;
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 940px;
+  margin: 20px auto 20px auto;
+  border: 2px solid #000000;
+  background-color: #bd7e4a;
+}
+header {
+  background-image: url(https://biaya.info/wp-content/uploads/2020/09/warteg-gratis-20200405-051906.jpg);
+  height: 160px;
+}
+h1 {
+  text-indent: -9999px;
+  font-weight: bold;
+  width: 940px;
+  height: 130px;
+  margin: 0px;
+}
+nav,
+footer {
+  clear: both;
+  color: #ffffff;
+  background-color: #83502e;
+  height: 30px;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 5px 0px 5px 30px;
+}
+nav li {
+  display: inline;
+  margin-right: 40px;
+}
+nav li a {
+  color: #ffffff;
+}
+nav li a:hover {
+  color: #b1b1b1;
+}
+section.courses {
+  float: right;
+  width: 660px;
+}
+article {
+  clear: both;
+  width: 100%;
+}
+h2 {
+  text-align: center;
+}
+hgroup {
+  margin-top: 20px;
+}
+figure {
+  float: left;
+  width: 290px;
+  height: 260px;
+  padding: 5px;
+}
+figcaption {
+  font-size: 90%;
+  text-align: left;
+  padding-bottom: -500px;
+}
+aside {
+  width: 230px;
+  float: left;
+  padding: 0px 0px 0px 20px;
+}
+aside section a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+aside section a:hover {
+  background-color: #3b3b3b;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+h2 {
+  margin: 10px 0px 5px 0px;
+  padding: 0px;
+}
+h3 {
+  margin: 0px 0px 10px 0px;
+  color: #ffffff;
+}
+aside h2 {
+  padding: 30px 0px 10px 0px;
+  color: #ffffff;
+}
+footer {
+  font-size: 80%;
+  padding: 7px 0px 0px 20px;
+}
+img {
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Make the images invisible by default */
+.Containers {
+  display: none;
+}
+
+.ContainersImage {
+  display: block;
+}
+
+/* forward & Back buttons */
+.Back,
+.forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.Back:hover,
+.forward:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption Info */
+.Info {
+  color: #5d534a;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The circles or bullets and indicators */
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable,
+.dots:hover {
+  background-color: #717161;
+}
