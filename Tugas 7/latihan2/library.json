@@ -1,0 +1,38 @@
+{
+  "Adult Fiction": [
+    "Mystery Thriller",
+    "High Fantasy", 
+    "Historical Romance",
+    "Historical Fiction"
+  ],
+  "Non Fiction": [
+    "Memoirs", 
+    "Self Help", 
+    "Encyclopedia", 
+    "Biographies", 
+    "Travel Guides", 
+    "History"
+  ],
+  "YA Fiction": [
+    "YA Contemporary", 
+    "YA Fantasy", 
+    "YA Mystery Thrillers", 
+    "YA Romance",
+    "YA Sci Fi"
+  ],
+  "Picture Books": [
+    "For Age 0-3", 
+    "For Age 4-6", 
+    "For Age 7-13", 
+    "For Age 13+",
+    "Manga"
+  ],
+  "DVD": [
+    "Romantic Comedy", 
+    "Thrillers", 
+    "Action", 
+    "Horror", 
+    "Romance", 
+    "Slice of Life"
+  ]
+}
