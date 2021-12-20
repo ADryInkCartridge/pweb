@@ -1,0 +1,46 @@
+{
+  "name": "trialcv",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.4",
+    "autoprefixer": "^10.3.4",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "style-loader": "^3.2.1",
+    "tailwindcss": "^2.2.11",
+    "vite": "^2.5.2",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.0"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.7",
+    "gh-pages": "^3.2.3",
+    "lodash": "^4.17.21",
+    "three": "^0.132.2",
+    "three.phenomenon": "^1.2.0",
+    "uon": "^1.2.1"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ADryInkCartridge/ADryInkCartridge.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ADryInkCartridge/ADryInkCartridge.github.io/issues"
+  },
+  "homepage": "https://github.com/ADryInkCartridge/ADryInkCartridge.github.io#readme",
+  "description": ""
+}

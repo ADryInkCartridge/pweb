@@ -1,107 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <title>store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+    <title>Validation Form</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+  </head>
 
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+  <body style="background-color: #DCDCDC">
+    <div class="container text-center">
+        <h1>Bayu Adjie Sidharta | 05111940000172</h1>
+    </div>
+    <div class="container">
+      <form
+        name="formPendaftaran"
+        action="#"
+        method="post"
+        onsubmit="return validateForm()"
+      >
+        <div class="form-group mt-5">
+          <label>Nama</label>
+          <input
+            type="text"
+            name="nama"
+            placeholder="Nama lengkap"
+            class="form-control"
+            required
+            maxlength="40"
+            minlength="3"
+          />
+        </div>
+        <div class="form-group">
+          <label>NRP</label>
+          <input
+            type="number"
+            name="nrp"
+            placeholder="NRP anda"
+            class="form-control"
+            required
+            maxlength="14"
+            minlegnth="10"
+          />
+        </div>
+        <div class="form-group">
+          <label>Jurusan</label>
+          <select name="jurusan" class="form-control">
+            <option value="0">Pilih Jurusan</option>
+            <option value="1">Teknik Informatika</option>
+            <option value="2">Teknik Komputer</option>
+            <option value="3">Teknik Biomedik</option>
+            <option value="4">Sistem Informasi</option>
+          </select>
+        </div>
+        <div class="form-group">
+            <label>Apakah sudah melakukan vaksin pertama?</label>
+            <select name="vaksin1" class="form-control">
+                <option value="0">Pilih opsi</option>
+                <option value="1">Sudah</option>
+                <option value="2">Belum</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Apakah sudah melakukan vaksin kedua?</label>
+            <select name="vaksin2" class="form-control">
+                <option value="0">Pilih opsi</option>
+                <option value="1">Sudah</option>
+                <option value="2">Belum</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script>
+      function validateForm() {
+        if (document.forms["formPendaftaran"]["nama"].value == "") {
+          alert("Nama tidak boleh kosong");
+          document.forms["formPendaftaran"]["nama"].focus();
+          return false;
+        }
+        if (document.forms["formPendaftaran"]["nrp"].value == "") {
+          alert("NRP Tidak Boleh Kosong");
+          document.forms["formPendaftaran"]["nrp"].focus();
+          return false;
+        }
+        if (document.forms["formPendaftaran"]["jurusan"].selectedIndex < 1) {
+          alert("Pilih Jurusan");
+          document.forms["formPendaftaran"]["jurusan"].focus();
+          return false;
+        }
+        if (document.forms["formPendaftaran"]["vaksin1"].selectedIndex < 1) {
+          alert("Pilih salah satu");
+          document.forms["formPendaftaran"]["vaksin1"].focus();
+          return false;
+        }
+        if (document.forms["formPendaftaran"]["vaksin2"].selectedIndex < 1) {
+          alert("Pilih salah satu");
+          document.forms["formPendaftaran"]["vaksin2"].focus();
+          return false;
         }
       }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="product.css" rel="stylesheet">
-  </head>
-  <body>
-    
-<header class="site-header sticky-top py-1">
-  <nav class="container fs-5 d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">About Us</a>
-  </nav>
-</header>
-
-<main>
-  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-    <img class="w-25 h-25"src="asset\png-apple-logo-9711.png" alt="">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-      <h1 class="display-4 fw-normal">Apple World</h1>
-      <p class="lead fw-normal">An Apple Store for Your Every Needs</p>
-      <a class="btn btn-outline-secondary" href="#">Retail Store Soon</a>
-    </div>  
-  </div>
-
-  <div class="d-md-flex flex-md-equal w-100">
-    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white">
-      <div class="my-3 py-3">
-        <h2 class="display-5">Iphone 13</h2>
-        <p class="lead">Latest and Greatest.</p>
-      </div>
-      <div class="bg-light shadow-sm mx-auto" style="width: 80%; border-radius: 21px 21px 21px 21px;">
-        <img src="asset\iphone_13_PNG29.png"  style="width: 80%;"alt="">
-      </div>
-      <a class="btn btn-outline-primary m-5" href="#">Buy Now</a>
-    </div>
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white">
-      <div class="my-3 py-3">
-        <h2 class="display-5 text-dark">Iphone 12</h2>
-        <p class="lead text-dark">Still better than your android.</p>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; border-radius: 21px 21px 21px 21px;">
-        <img src="asset\iphone_12_PNG27.png"  style="width: 70%;"alt="">
-      </div>
-      <a class="btn btn-outline-primary m-5" href="#">Buy Now</a>
-    </div>
-  </div>
-  <div class="d-md-flex flex-md-equal w-100">
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white">
-      <div class="my-3 py-3">
-        <h2 class="display-5 text-dark">Iphone 11</h2>
-        <p class="lead text-dark">Can still run games!.</p>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; border-radius: 21px 21px 21px 21px;">
-        <img src="asset\iphone_11_PNG38.png" class="pb-5" style="width: 80%;"alt="">
-      </div>
-      <a class="btn btn-outline-primary m-5" href="#">Buy Now</a>
-    </div>
-    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white">
-      <div class="my-3 py-3">
-        <h2 class="display-5">Iphone X</h2>
-        <p class="lead">Buy now for cheap!</p>
-      </div>
-      <div class="bg-light shadow-sm mx-auto" style="width: 80%; border-radius: 21px 21px 21px 21px;">
-        <img src="asset\pngwing.com.png" class="py-5"  style="width: 35%;"alt="">
-      </div>
-      <a class="btn btn-outline-primary m-5" href="#">Buy Now</a>
-    </div>
-  </div>
-</main>
-
-<footer class="p-2">
-    <p class="text-xl-start">Bayu Adjie Sidharta | 05111940000172</p>
-</footer>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    </script>
+  </body>
 </html>
